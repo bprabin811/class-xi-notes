@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class NepaliPage extends StatefulWidget {
-  const NepaliPage({super.key});
+  final VoidCallback onToggleDarkMode;
+  const NepaliPage({super.key,required this.onToggleDarkMode});
 
   @override
   State<NepaliPage> createState() => _NepaliPageState();
 }
 
 class _NepaliPageState extends State<NepaliPage> {
+  bool isDarkMode = false;
   List nepaliChapters = [
     '1. आमाको सपना Aamako Sapana ',
     '2. विरहिणी दमयन्ती Birahini Damayanti',
@@ -63,6 +65,16 @@ class _NepaliPageState extends State<NepaliPage> {
       appBar: AppBar(
         title: const Text('Nepali-XII'),
         elevation: 0,
+        actions: [
+          Switch(
+              activeColor: Colors.purple,
+              value: Theme.of(context).brightness == Brightness.dark,
+              onChanged: (value) {
+                widget.onToggleDarkMode();
+                
+              }
+            ),
+        ],
       ),
       body: ListView.builder(
           physics: const BouncingScrollPhysics(),

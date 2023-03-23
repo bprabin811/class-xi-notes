@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class SocialPage extends StatefulWidget {
-  const SocialPage({super.key});
+  final VoidCallback onToggleDarkMode;
+  const SocialPage({super.key,required this.onToggleDarkMode});
 
   @override
   State<SocialPage> createState() => _SocialPageState();
 }
 
 class _SocialPageState extends State<SocialPage> {
+  bool isDarkMode = false;
   List socialUnits = [
     'एकाइ १ सामाजिक तथा जीवनोपयोगी शिक्षाको अवधारणा',
     'एकाइ २ जीवनोपयोगी सिपका रूपमा डिजिटल सिपहरू तथा सामान्य अनुसन्धान सिपहरू',
@@ -125,6 +127,16 @@ class _SocialPageState extends State<SocialPage> {
       appBar: AppBar(
         title: const Text('Social-XII'),
         elevation: 0,
+        actions: [
+          Switch(
+              activeColor: Colors.purple,
+              value: Theme.of(context).brightness == Brightness.dark,
+              onChanged: (value) {
+                widget.onToggleDarkMode();
+                
+              }
+            ),
+        ],
       ),
       body: ListView.builder(
           physics: const BouncingScrollPhysics(),

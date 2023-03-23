@@ -74,9 +74,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: 100,
                 ),
               ),
-              const Gap(10),
-              SizedBox(
-                height: 400,
+              const Gap(20),
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(width: 0.5,color: Colors.purple),
+                  borderRadius: BorderRadius.circular(10)
+                ),
+                height: 350,
                 child: GridView.count(
                   physics: const BouncingScrollPhysics(),
                   crossAxisCount: 2,
@@ -87,7 +91,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const EnglishPage()),
+                              builder: (context) =>  EnglishPage(
+                                onToggleDarkMode: widget.onToggleDarkMode,
+                              )),
                         );
                       },
                       child: Column(
@@ -118,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SocialPage()),
+                              builder: (context) => SocialPage(onToggleDarkMode: widget.onToggleDarkMode,)),
                         );
                       },
                       child: Column(
@@ -149,7 +155,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const NepaliPage()),
+                              builder: (context) => NepaliPage(onToggleDarkMode: widget.onToggleDarkMode,)),
                         );
                       },
                       child: Column(
@@ -178,6 +184,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
+               const Gap(40),
               GestureDetector(
                 onTap: () => setState(() {
                   _launched = _launchInBrowser(moreNote);

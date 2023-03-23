@@ -21,6 +21,7 @@ class MyDrawer extends StatefulWidget {
 
 class _MyDrawerState extends State<MyDrawer> {
   bool isDarkMode = false;
+  String mode='Dark Mode';
   Future<void>? _launched;
   @override
   Widget build(BuildContext context) {
@@ -29,8 +30,17 @@ class _MyDrawerState extends State<MyDrawer> {
     final Uri toGForm =
         Uri(scheme: 'https', host: 'forms.gle', path: 'fzvC2pTidC4aNUb59');
 
-    final Uri privacyPolicy =
-        Uri(scheme: 'https', host: 'www.nepalenotes.com', path: 'p/privacy-policy.html');
+    final Uri toFb =
+        Uri(scheme: 'https', host: 'www.facebook.com', path: 'nepalenote');
+    final Uri toYt =
+        Uri(scheme: 'https', host: 'www.youtube.com', path: '@nepalenotes');
+    final Uri toInsta =
+        Uri(scheme: 'https', host: 'www.instagram.com', path: 'nepalenotes');
+
+    final Uri privacyPolicy = Uri(
+        scheme: 'https',
+        host: 'www.nepalenotes.com',
+        path: 'p/privacy-policy.html');
 
     return Drawer(
       child: SingleChildScrollView(
@@ -38,21 +48,21 @@ class _MyDrawerState extends State<MyDrawer> {
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           DrawerHeader(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ClipRRect(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ClipRRect(
                 borderRadius: BorderRadius.circular(25),
                 child: const Image(
-              image: AssetImage('assets/images/logo.jpeg'),
-              width: 50,
+                  image: AssetImage('assets/images/logo.jpeg'),
+                  width: 50,
                 ),
               ),
-                  Text(
-            'Class-XII Notes',
-            style: Theme.of(context).textTheme.headlineMedium,
-          ),
-                ],
-              )),
+              Text(
+                'Class-XII Notes',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+            ],
+          )),
           Divider(
             thickness: 1,
             indent: 20,
@@ -60,7 +70,7 @@ class _MyDrawerState extends State<MyDrawer> {
           ),
           ListTile(
             title: Text(
-              'Mode',
+              mode,
               style: Theme.of(context).textTheme.bodyLarge,
             ),
             trailing: Switch(
@@ -68,6 +78,13 @@ class _MyDrawerState extends State<MyDrawer> {
               value: Theme.of(context).brightness == Brightness.dark,
               onChanged: (value) {
                 widget.onToggleDarkMode();
+                setState(() {
+                  if(mode=='Dark Mode'){
+                    mode='Light Mode';
+                  }else{
+                    mode='Dark Mode';
+                  }
+                });
               },
             ),
           ),
@@ -145,6 +162,46 @@ class _MyDrawerState extends State<MyDrawer> {
               FontAwesomeIcons.googlePlay,
             ),
             onTap: () {},
+          ),
+          Divider(
+            thickness: 1,
+            indent: 20,
+            endIndent: 30,
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Text('Follow Us'),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: Container(
+              height: 60,
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.purple, width: 0.5),
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GestureDetector(
+                      onTap: () => setState(() {
+                            _launched = _launchInBrowser(toYt);
+                          }),
+                      child: Icon(FontAwesomeIcons.youtube)),
+                      GestureDetector(
+                      onTap: () => setState(() {
+                            _launched = _launchInBrowser(toFb);
+                          }),
+                      child: Icon(FontAwesomeIcons.facebook)),
+                      GestureDetector(
+                      onTap: () => setState(() {
+                            _launched = _launchInBrowser(toInsta);
+                          }),
+                      child: Icon(FontAwesomeIcons.instagram)),
+                  
+                ],
+              ),
+            ),
           ),
           const SizedBox(
             height: 25,

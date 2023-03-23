@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class EnglishPage extends StatefulWidget {
-  const EnglishPage({super.key});
+  final VoidCallback onToggleDarkMode;
+  const EnglishPage({super.key,required this.onToggleDarkMode});
 
   @override
   State<EnglishPage> createState() => _EnglishPageState();
 }
 
 class _EnglishPageState extends State<EnglishPage> {
+  bool isDarkMode = false;
   List sectionEnglish = [
     'Section One: Language Development',
     'Section Two: Literature',
@@ -69,6 +71,16 @@ class _EnglishPageState extends State<EnglishPage> {
       appBar: AppBar(
         title: const Text('English-XII'),
         elevation: 0,
+        actions: [
+          Switch(
+              activeColor: Colors.purple,
+              value: Theme.of(context).brightness == Brightness.dark,
+              onChanged: (value) {
+                widget.onToggleDarkMode();
+                
+              }
+            ),
+        ],
       ),
       body: ListView.builder(
           physics: const BouncingScrollPhysics(),
