@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class NepaliPage extends StatefulWidget {
   const NepaliPage({super.key});
@@ -9,22 +10,58 @@ class NepaliPage extends StatefulWidget {
 
 class _NepaliPageState extends State<NepaliPage> {
   List nepaliChapters = [
-    'Ch-1',
-    'Ch-2',
-    'Ch-3',
-    'Ch-4',
-    'Ch-5',
-    'Ch-6',
-    'Ch-7',
-    'Ch-8',
-    'Ch-9',
-    
+    '1. आमाको सपना Aamako Sapana ',
+    '2. विरहिणी दमयन्ती Birahini Damayanti',
+    '3. घनघस्याको उकालो काट्ता Ghanaghasya ko ukalo katda',
+    '4. व्यावसायिक पत्र Byabasayik Patra',
+    '5. एक चिहान Ek Chihaan',
+    '6. स्टिफन विलियम हकिङ Stephem William Hawaking',
+    '7. हामीलाई बोलाउँछन् हिमचुली Hamilai bolauchan Himchuli',
+    '8. मातृत्व Matrittwo',
+    '9. गोर्खे Gorkhe',
+    '10. नेपाली पहिचान Nepali Pahicha',
+    '11. सहकारी Sahakaari',
+    '12. जीवन मार्ग Jiban Marga'
   ];
+  List chapterContent = [
+    'assets/databases/ch1.pdf',
+    'assets/databases/ch1.pdf',
+    'assets/databases/ch1.pdf',
+    'assets/databases/ch1.pdf',
+    'assets/databases/ch1.pdf',
+    'assets/databases/ch1.pdf',
+    'assets/databases/ch1.pdf',
+    'assets/databases/ch1.pdf',
+    'assets/databases/ch1.pdf',
+    'assets/databases/ch1.pdf',
+    'assets/databases/ch1.pdf',
+    'assets/databases/ch1.pdf',
+  ];
+
+  void _showChapter(String chapterName, String chapterContent) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => Scaffold(
+            appBar: AppBar(
+              title: Text(chapterName),
+              elevation: 0,
+            ),
+            body: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SfPdfViewer.asset(
+                chapterContent,
+                interactionMode: PdfInteractionMode.pan,
+              ),
+            )),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Nepali-XI'),
+        title: const Text('Nepali-XII'),
         elevation: 0,
       ),
       body: ListView.builder(
@@ -33,11 +70,18 @@ class _NepaliPageState extends State<NepaliPage> {
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              child: ListTile(
-                tileColor: Colors.grey.shade100,
-                title: Text(
-                  nepaliChapters[index],
-                  style: Theme.of(context).textTheme.bodyMedium,
+              child: GestureDetector(
+                onTap: () {
+                  _showChapter(nepaliChapters[index],chapterContent[index]);
+                },
+                child: Card(
+                  elevation: 1,
+                  child: ListTile(
+                    title: Text(
+                      nepaliChapters[index],
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                  ),
                 ),
               ),
             );
