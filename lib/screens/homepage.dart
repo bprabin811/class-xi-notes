@@ -70,17 +70,18 @@ class _MyHomePageState extends State<MyHomePage> {
               ClipRRect(
                 borderRadius: BorderRadius.circular(50),
                 child: const Image(
-                  image: AssetImage('assets/images/logo.jpeg'),
-                  width: 100,
+                  color: Colors.black87,
+                  image: AssetImage('assets/images/logo.png'),
+                  width: 200,
                 ),
               ),
-              const Gap(20),
+              const Gap(40),
               Container(
                 decoration: BoxDecoration(
                   border: Border.all(width: 0.5,color: Colors.purple),
                   borderRadius: BorderRadius.circular(10)
                 ),
-                height: 350,
+                height: 400,
                 child: GridView.count(
                   physics: const BouncingScrollPhysics(),
                   crossAxisCount: 2,
@@ -100,8 +101,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            width: 80,
-                            height: 80,
+                            width: 70,
+                            height: 70,
                             decoration: BoxDecoration(
                               color: Colors.purple.shade300,
                               borderRadius: BorderRadius.circular(10),
@@ -131,8 +132,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            width: 80,
-                            height: 80,
+                            width: 70,
+                            height: 70,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: Colors.purple.shade300,
@@ -162,8 +163,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            width: 80,
-                            height: 80,
+                            width: 70,
+                            height: 70,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: Colors.purple.shade300,

@@ -21,7 +21,7 @@ class MyDrawer extends StatefulWidget {
 
 class _MyDrawerState extends State<MyDrawer> {
   bool isDarkMode = false;
-  String mode='Dark Mode';
+  String mode = 'Dark Mode';
   Future<void>? _launched;
   @override
   Widget build(BuildContext context) {
@@ -53,14 +53,13 @@ class _MyDrawerState extends State<MyDrawer> {
               ClipRRect(
                 borderRadius: BorderRadius.circular(25),
                 child: const Image(
-                  image: AssetImage('assets/images/logo.jpeg'),
-                  width: 50,
+                  color: Colors.black87,
+                  image: AssetImage('assets/images/logo.png'),
+                  width: 100,
                 ),
               ),
-              Text(
-                'Class-XII Notes',
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
+              Text('Class-XII Notes',
+                  style: Theme.of(context).textTheme.headlineMedium),
             ],
           )),
           Divider(
@@ -79,10 +78,10 @@ class _MyDrawerState extends State<MyDrawer> {
               onChanged: (value) {
                 widget.onToggleDarkMode();
                 setState(() {
-                  if(mode=='Dark Mode'){
-                    mode='Light Mode';
-                  }else{
-                    mode='Dark Mode';
+                  if (mode == 'Dark Mode') {
+                    mode = 'Light Mode';
+                  } else {
+                    mode = 'Dark Mode';
                   }
                 });
               },
@@ -170,7 +169,7 @@ class _MyDrawerState extends State<MyDrawer> {
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Text('Follow Us'),
+            child: Text('Follow Us On'),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -188,17 +187,16 @@ class _MyDrawerState extends State<MyDrawer> {
                             _launched = _launchInBrowser(toYt);
                           }),
                       child: Icon(FontAwesomeIcons.youtube)),
-                      GestureDetector(
+                  GestureDetector(
                       onTap: () => setState(() {
                             _launched = _launchInBrowser(toFb);
                           }),
                       child: Icon(FontAwesomeIcons.facebook)),
-                      GestureDetector(
+                  GestureDetector(
                       onTap: () => setState(() {
                             _launched = _launchInBrowser(toInsta);
                           }),
                       child: Icon(FontAwesomeIcons.instagram)),
-                  
                 ],
               ),
             ),
@@ -208,7 +206,7 @@ class _MyDrawerState extends State<MyDrawer> {
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Text('Nepal Enotes Pvt. Ltd.All right reserved'),
+            child: Text('Nepal Enotes. All right reserved'),
           ),
         ]),
       ),
