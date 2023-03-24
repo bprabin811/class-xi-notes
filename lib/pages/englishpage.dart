@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+
 
 class EnglishPage extends StatefulWidget {
   final VoidCallback onToggleDarkMode;
@@ -65,6 +67,57 @@ class _EnglishPageState extends State<EnglishPage> {
     ]
   ];
 
+  List<List<String>> englishUnitsContent = [
+    [
+      'assets/databases/ch1.pdf',
+      '2. ',
+      '3. ',
+      '4. ',
+      '5. ',
+      '6. ',
+      '7. ',
+      '8. ',
+      '9. ',
+      '10. ',
+      '11. ',
+      '12. ',
+      '13. ',
+      '14. ',
+      '15. ',
+      '16. ',
+      '17. ',
+      '18. ',
+      '19. ',
+      '20.  '
+    ],
+    [
+      'Unit One: Short Stories',
+      'assets/databases/ch1.pdf',
+      '2. A Respectable Woman',
+      '3. A Devoted Son',
+      '4. The Treasure in the Forest',
+      '5. My Old Home',
+      '6. The Half-closed Eyes of the Buddha and the Slowly Sinking Sun',
+      '7. A Very Old Man with Enormous Wings',
+      'Unit Two: Poems',
+      'assets/databases/ch1.pdf',
+      '2. Every Morning I Wake',
+      '3. I Was My Own Route',
+      '4. The Awakening Age',
+      '5. Soft Storm',
+      'Unit Three: Essays',
+      'assets/databases/ch1.pdf',
+      '2. Marriage as a Social Institution',
+      '3. Knowledge and Wisdom',
+      '4. Humility',
+      '5. Human Rights and the Age of Inequality',
+      'Unit Four: One-act Plays',
+      'assets/databases/ch1.pdf',
+      '2. Facing Death',
+      '3. The Bull'
+    ]
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,6 +152,7 @@ class _EnglishPageState extends State<EnglishPage> {
                               subName: 'English-XII',
                               indexColor: index == 1,
                               unitsList: englishUnits,
+                              unitsContent: englishUnitsContent[index],
                             )),
                   );
                 },
@@ -124,14 +178,15 @@ class SectionPage extends StatefulWidget {
   final List<String> chapterName;
   final bool indexColor;
   final List<List<String>> unitsList;
-  
+  final List<String> unitsContent;
   SectionPage(
       {super.key,
       required this.countList,
       required this.chapterName,
       required this.subName,
       required this.indexColor,
-      required this.unitsList});
+      required this.unitsList,
+      required this.unitsContent});
 
   @override
   State<SectionPage> createState() => _SectionPageState();
@@ -187,6 +242,7 @@ class _SectionPageState extends State<SectionPage> {
                               chapterName: widget.chapterName[index],
                               subName: widget.subName,
                               unitsList: widget.unitsList,
+                              unitContent: widget.unitsContent[index],
                               unitIndex: index,
                             )),
                   );
@@ -212,6 +268,7 @@ class NotePage extends StatefulWidget {
   final String subName;
   final String chapterName;
   final List<List<String>> unitsList;
+  final String unitContent;
   final int unitIndex;
 
   NotePage(
@@ -219,7 +276,8 @@ class NotePage extends StatefulWidget {
       required this.chapterName,
       required this.subName,
       required this.unitsList,
-      required this.unitIndex});
+      required this.unitIndex,
+      required this.unitContent});
 
   @override
   State<NotePage> createState() => _NotePageState();
@@ -233,12 +291,13 @@ class _NotePageState extends State<NotePage> {
         title: Text(widget.chapterName),
         elevation: 0,
       ),
-      body: Center(
-        child: Text(
-          'Notes for ${widget.chapterName} of ${widget.subName}',
-          style: Theme.of(context).textTheme.bodyMedium,
-        ),
-      ),
+      body: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SfPdfViewer.asset(
+                widget.unitContent,
+                interactionMode: PdfInteractionMode.pan,
+              ),
+            )
     );
   }
 }
