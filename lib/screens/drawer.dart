@@ -206,7 +206,7 @@ class _MyDrawerState extends State<MyDrawer> {
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Text('Nepal Enotes. All right reserved'),
+            child: Text('NepalEnotes ©All right reserved'),
           ),
         ]),
       ),

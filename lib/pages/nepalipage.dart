@@ -26,12 +26,12 @@ class _NepaliPageState extends State<NepaliPage> {
     '12. जीवन मार्ग Jiban Marga'
   ];
   List chapterContent = [
-    'assets/databases/ch1.pdf',
-    'assets/databases/ch1.pdf',
-    'assets/databases/ch1.pdf',
-    'assets/databases/ch1.pdf',
-    'assets/databases/ch1.pdf',
-    'assets/databases/ch1.pdf',
+    'assets/databases/Nepali_1.pdf',
+    'assets/databases/Nepali_2.pdf',
+    'assets/databases/Nepali_3.pdf',
+    'assets/databases/Nepali_4.pdf',
+    'assets/databases/Nepali_5.pdf',
+    'assets/databases/Nepali_6.pdf',
     'assets/databases/ch1.pdf',
     'assets/databases/ch1.pdf',
     'assets/databases/ch1.pdf',
@@ -39,6 +39,8 @@ class _NepaliPageState extends State<NepaliPage> {
     'assets/databases/ch1.pdf',
     'assets/databases/ch1.pdf',
   ];
+
+  
 
   void _showChapter(String chapterName, String chapterContent) {
     Navigator.of(context).push(
