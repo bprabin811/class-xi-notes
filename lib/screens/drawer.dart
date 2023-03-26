@@ -134,6 +134,16 @@ class _MyDrawerState extends State<MyDrawer> {
           ),
           ListTile(
             title: Text(
+              'Class-8 Notes',
+              style: Theme.of(context).textTheme.bodyLarge,
+            ),
+            leading: Icon(
+              FontAwesomeIcons.googlePlay,
+            ),
+            onTap: () {},
+          ),
+          ListTile(
+            title: Text(
               'Class-9 Notes',
               style: Theme.of(context).textTheme.bodyLarge,
             ),
@@ -154,7 +164,7 @@ class _MyDrawerState extends State<MyDrawer> {
           ),
           ListTile(
             title: Text(
-              'Class-12 Notes',
+              'Class-11 Notes',
               style: Theme.of(context).textTheme.bodyLarge,
             ),
             leading: Icon(
