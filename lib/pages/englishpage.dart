@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-
 class EnglishPage extends StatefulWidget {
   final VoidCallback onToggleDarkMode;
-  const EnglishPage({super.key,required this.onToggleDarkMode});
+  const EnglishPage({super.key, required this.onToggleDarkMode});
 
   @override
   State<EnglishPage> createState() => _EnglishPageState();
@@ -28,20 +27,20 @@ class _EnglishPageState extends State<EnglishPage> {
       '8. Human Culture',
       '9. Ecology and Environment',
       '10. Career Opportunities',
-      '11. Hobbies',
-      '12. Animal World',
-      '13. History',
-      '14. Human Rights',
-      '15. Leisure and Entertainment',
-      '16. Fantasy',
-      '17. War and Peace',
-      '18. Music and Creation',
-      '19. Migration and Diaspora',
-      '20. Power and Politics'
+      // '11. Hobbies',
+      // '12. Animal World',
+      // '13. History',
+      // '14. Human Rights',
+      // '15. Leisure and Entertainment',
+      // '16. Fantasy',
+      // '17. War and Peace',
+      // '18. Music and Creation',
+      // '19. Migration and Diaspora',
+      // '20. Power and Politics'
     ],
     [
       'Unit One: Short Stories',
-      '1. Neighbours',
+      // '1. Neighbours',
       '2. A Respectable Woman',
       '3. A Devoted Son',
       '4. The Treasure in the Forest',
@@ -69,52 +68,52 @@ class _EnglishPageState extends State<EnglishPage> {
 
   List<List<String>> englishUnitsContent = [
     [
-      'assets/databases/ch1.pdf',
-      '2. ',
-      '3. ',
-      '4. ',
-      '5. ',
-      '6. ',
-      '7. ',
-      '8. ',
-      '9. ',
-      '10. ',
-      '11. ',
-      '12. ',
-      '13. ',
-      '14. ',
-      '15. ',
-      '16. ',
-      '17. ',
-      '18. ',
-      '19. ',
-      '20.  '
+      'assets/databases/Chapter 1-min.pdf',
+      'assets/databases/Chapter 2-min.pdf',
+      'assets/databases/Chapter 3-min.pdf',
+      'assets/databases/Chapter 4-min.pdf',
+      'assets/databases/Chapter 5-min.pdf',
+      'assets/databases/Chapter 6-min.pdf',
+      'assets/databases/Chapter 7-min.pdf',
+      'assets/databases/Chapter 8-min.pdf',
+      'assets/databases/Chapter 9-min.pdf',
+      'assets/databases/Chapter 10-min.pdf',
+      // '11',
+      // '12. ',
+      // '13. ',
+      // '14. ',
+      // '15. ',
+      // '16. ',
+      // '17. ',
+      // '18. ',
+      // '19. ',
+      // '20.  '
     ],
     [
       'Unit One: Short Stories',
-      'assets/databases/ch1.pdf',
-      '2. A Respectable Woman',
-      '3. A Devoted Son',
-      '4. The Treasure in the Forest',
-      '5. My Old Home',
-      '6. The Half-closed Eyes of the Buddha and the Slowly Sinking Sun',
-      '7. A Very Old Man with Enormous Wings',
+      // '',
+      'assets/databases/Eng1.1-min.pdf',
+      'assets/databases/Eng1.2-min.pdf',
+      'assets/databases/Eng1.4-min.pdf',
+      'assets/databases/Eng1.5-min.pdf',
+      'assets/databases/Eng1.6-min.pdf',
+      'assets/databases/Eng1.7-min.pdf',
       'Unit Two: Poems',
-      'assets/databases/ch1.pdf',
-      '2. Every Morning I Wake',
-      '3. I Was My Own Route',
-      '4. The Awakening Age',
-      '5. Soft Storm',
+      'assets/databases/Eng2.1-min.pdf',
+      'assets/databases/Eng2.2-min.pdf',
+      'assets/databases/Eng2.3-min.pdf',
+      'assets/databases/Eng2.4-min.pdf',
+      'assets/databases/Eng2.5-min.pdf',
       'Unit Three: Essays',
-      'assets/databases/ch1.pdf',
-      '2. Marriage as a Social Institution',
-      '3. Knowledge and Wisdom',
-      '4. Humility',
-      '5. Human Rights and the Age of Inequality',
+      'assets/databases/Eng3.1-min.pdf',
+      'assets/databases/Eng3.2-min.pdf',
+      'assets/databases/Eng3.3-min.pdf',
+      'assets/databases/Eng3.4-min.pdf',
+      'assets/databases/Eng3.5-min.pdf',
       'Unit Four: One-act Plays',
-      'assets/databases/ch1.pdf',
-      '2. Facing Death',
-      '3. The Bull'
+      'assets/databases/Eng4.1-min.pdf',
+      'assets/databases/Eng4.2-min.pdf',
+      'assets/databases/Eng4.3-min.pdf',
     ]
   ];
 
@@ -130,9 +129,7 @@ class _EnglishPageState extends State<EnglishPage> {
               value: Theme.of(context).brightness == Brightness.dark,
               onChanged: (value) {
                 widget.onToggleDarkMode();
-                
-              }
-            ),
+              }),
         ],
       ),
       body: ListView.builder(
@@ -201,11 +198,11 @@ class _SectionPageState extends State<SectionPage> {
       cardColors = List.generate(widget.countList, (index) {
         if (index == 0) {
           return Colors.purple[400]!;
-        } else if (index == 8) {
+        } else if (index == 7) {
           return Colors.purple[400]!;
-        } else if (index == 14) {
+        } else if (index == 13) {
           return Colors.purple[400]!;
-        } else if (index == 20) {
+        } else if (index == 19) {
           return Colors.purple[400]!;
         }
         {
@@ -217,7 +214,6 @@ class _SectionPageState extends State<SectionPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.subName),
-        
         elevation: 0,
       ),
       body: ListView.builder(
@@ -230,9 +226,9 @@ class _SectionPageState extends State<SectionPage> {
                 onTap: () {
                   if (widget.indexColor &&
                       (index == 0 ||
-                          index == 8 ||
-                          index == 14 ||
-                          index == 20)) {
+                          index == 7 ||
+                          index == 13 ||
+                          index == 19)) {
                     return; // do not navigate to NotePage if the index is purple
                   }
                   Navigator.push(
@@ -287,17 +283,16 @@ class _NotePageState extends State<NotePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.chapterName),
-        elevation: 0,
-      ),
-      body: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SfPdfViewer.asset(
-                widget.unitContent,
-                interactionMode: PdfInteractionMode.pan,
-              ),
-            )
-    );
+        appBar: AppBar(
+          title: Text(widget.chapterName),
+          elevation: 0,
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SfPdfViewer.asset(
+            widget.unitContent,
+            interactionMode: PdfInteractionMode.pan,
+          ),
+        ));
   }
 }

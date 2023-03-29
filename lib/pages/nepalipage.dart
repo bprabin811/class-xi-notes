@@ -23,21 +23,21 @@ class _NepaliPageState extends State<NepaliPage> {
     '9. गोर्खे Gorkhe',
     '10. नेपाली पहिचान Nepali Pahicha',
     '11. सहकारी Sahakaari',
-    '12. जीवन मार्ग Jiban Marga'
+    // '12. जीवन मार्ग Jiban Marga'
   ];
   List chapterContent = [
-    'assets/databases/Nepali_1.pdf',
-    'assets/databases/Nepali_2.pdf',
-    'assets/databases/Nepali_3.pdf',
-    'assets/databases/Nepali_4.pdf',
-    'assets/databases/Nepali_5.pdf',
-    'assets/databases/Nepali_6.pdf',
-    'assets/databases/ch1.pdf',
-    'assets/databases/ch1.pdf',
-    'assets/databases/ch1.pdf',
-    'assets/databases/ch1.pdf',
-    'assets/databases/ch1.pdf',
-    'assets/databases/ch1.pdf',
+    'assets/databases/Nepali1.pdf',
+    'assets/databases/Nepali2.pdf',
+    'assets/databases/Nepali3.pdf',
+    'assets/databases/Nepali4.pdf',
+    'assets/databases/Nepali5.pdf',
+    'assets/databases/Nepali6.pdf',
+    'assets/databases/Nepali7.pdf',
+    'assets/databases/Nepali8.pdf',
+    'assets/databases/Nepali9.pdf',
+    'assets/databases/Nepali10.pdf',
+    'assets/databases/Nepali11.pdf',
+    // '',
   ];
 
   

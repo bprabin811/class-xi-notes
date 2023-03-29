@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notesxi/screens/homepage.dart';
+import 'package:notes_xii_offline/screens/homepage.dart';
 
 void main() {
   runApp(const MyApp());

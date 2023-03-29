@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:notesxi/pages/englishpage.dart';
-import 'package:notesxi/pages/nepalipage.dart';
-import 'package:notesxi/pages/socialpage.dart';
-import 'package:notesxi/screens/drawer.dart';
+import 'package:notes_xii_offline/pages/englishpage.dart';
+import 'package:notes_xii_offline/pages/nepalipage.dart';
+import 'package:notes_xii_offline/pages/socialpage.dart';
+import 'package:notes_xii_offline/screens/drawer.dart';
 import 'package:gap/gap.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';

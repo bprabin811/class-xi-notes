@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-
 class SocialPage extends StatefulWidget {
   final VoidCallback onToggleDarkMode;
-  const SocialPage({super.key,required this.onToggleDarkMode});
+  const SocialPage({super.key, required this.onToggleDarkMode});
 
   @override
   State<SocialPage> createState() => _SocialPageState();
@@ -27,7 +26,7 @@ class _SocialPageState extends State<SocialPage> {
   ];
   List socialChapters = [
     [
-      'पाठ : १ सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षाको अन्तरसम्बन्ध',
+      // 'पाठ : १ सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षाको अन्तरसम्बन्ध',
       'पाठ: २ जीवनोपयोगी शिक्षा, जीवनोपयोगी सिप र स्वस्थ जीवनशैलीबिचको अन्तरसम्बन्ध'
     ],
     [
@@ -45,7 +44,7 @@ class _SocialPageState extends State<SocialPage> {
       'पाठ : १ जीवनोपयोगी सिपको ऐतिहासिक पृष्ठभूमि, वर्गीकरण र अभ्यास',
       'पाठ: २ समालोचनात्मक चिन्तन',
       'पाठ: ३ सिर्जनात्मक चिन्तन',
-      'पाठ: ४ समानुभूति',
+      // 'पाठ: ४ समानुभूति',
       'पाठ: ५ आत्मबोध',
       'पाठ: ६ संवेग व्यवस्थापन'
     ],
@@ -98,8 +97,8 @@ class _SocialPageState extends State<SocialPage> {
     [
       'पाठ :१ सहरीकरणको अवधारणा',
       'पाठ :२ नेपालमा सहरीकरण',
-      'पाठ :३ गाउँ सहर सम्बन्ध'
-          'पाठ :४ नेपालमा सहरीकरणका अवसर र चुनौती',
+      'पाठ :३ गाउँ सहर सम्बन्ध',
+      'पाठ :४ नेपालमा सहरीकरणका अवसर र चुनौती',
       'पाठ :६ बसाइँसराइको प्रवृत्ति',
       'पाठ :७ सुरक्षित एवम् मर्यादित आप्रवासन',
       'पाठ :८ बसाइँसराइको प्रभाव'
@@ -122,107 +121,105 @@ class _SocialPageState extends State<SocialPage> {
     ]
   ];
 
-
   List socialChaptersContent = [
     [
-      'assets/databases/ch1.pdf',
-      'पाठ: २ जीवनोपयोगी शिक्षा, जीवनोपयोगी सिप र स्वस्थ जीवनशैलीबिचको अन्तरसम्बन्ध'
+      // 'assets/databases/social1.2-min.pdf'
+      'assets/databases/social1.1-min.pdf',
     ],
     [
-      'पाठ: १ अनुसन्धान परिचय',
-      'पाठ: २ सामाजिक अध्ययनमा सहसम्बन्ध तथा कार्यकारण सम्बन्धको अवधारणा',
-      'पाठ: ३ अध्ययन प्रस्तावनाको संरचना',
-      'पाठ: ४ लेखनकार्यमा अरूको लेखरचनाको प्रयोग गर्दा ध्यान दिनुपर्ने नैतिक पक्ष',
-      'पाठ: ५ सामाजिक अध्ययनका लागि समस्या निर्माण र अध्ययन विधि चयन',
-      'पाठ: ६ सामाजिक तथ्याब्क र सूचना सब्कलनका विधि र साधनहरू',
-      'पाठ: ७ तथ्याब्क तथा सूचनाको विश्लेषण र प्रस्तुतीकरण',
-      'पाठ: ८ तथ्याब्क प्रशोधन र विश्लेषणमा माइक्रोसफ्ट एक्सेलको प्रयोग',
-      'पाठ: ९ शाब्दिक जानकारीलाई प्रस्तुत गर्ने तरिका'
+      'assets/databases/social2.1-min.pdf',
+      'assets/databases/social2.2-min.pdf',
+      'assets/databases/social2.3-min.pdf',
+      'assets/databases/social2.4-min.pdf',
+      'assets/databases/social2.5-min.pdf',
+      'assets/databases/social2.6-min.pdf',
+      'assets/databases/social2.7-min.pdf',
+      'assets/databases/social2.8-min.pdf',
+      'assets/databases/social2.9-min.pdf',
     ],
     [
-      'पाठ : १ जीवनोपयोगी सिपको ऐतिहासिक पृष्ठभूमि, वर्गीकरण र अभ्यास',
-      'पाठ: २ समालोचनात्मक चिन्तन',
-      'पाठ: ३ सिर्जनात्मक चिन्तन',
-      'पाठ: ४ समानुभूति',
-      'पाठ: ५ आत्मबोध',
-      'पाठ: ६ संवेग व्यवस्थापन'
+      'assets/databases/social3.1-min.pdf',
+      'assets/databases/social3.2-min.pdf',
+      'assets/databases/social3.3-min.pdf',
+      // 'assets/databases/social3.4-min.pdf',
+      'assets/databases/social3.5-min.pdf',
+      'assets/databases/social3.6-min.pdf',
     ],
     [
-      'पाठ: १ वर्तमान विश्वका सामाजिक विविधता र विशेषता',
-      'पाठ: २ सामाजिक सम्बन्धहरूको विकास र सामाजिक अन्तर निर्भरता',
-      'पाठ: ३ जीवन दर्शन, सामाजिक मूल्य मान्यताहरू र सामाजिक व्यवहार',
-      'पाठ: ४ दैनिक जीवनमा दर्शनको उपयोगिता',
-      'पाठ: ५ समुदायमा आएका परिवर्तन र सामाजिक रूपान्तरण'
+      'assets/databases/social4.1-min.pdf',
+      'assets/databases/social4.2-min.pdf',
+      'assets/databases/social4.3-min.pdf',
+      'assets/databases/social4.4-min.pdf',
+      'assets/databases/social4.5-min.pdf',
     ],
     [
-      'पाठ: १ नेपालका प्रशासनिक प्रदेश',
-      'पाठ: २ प्रदेशहरूको जनसाँख्यिक अवस्था र विशेषता',
-      'पाठ: ३ नेपालका प्रदेशका सामाजिक सांस्कृतिक अवस्था र विशेषता',
-      'पाठ: ४ नेपालका प्रदेशको आर्थिक अवस्था र विशेषता',
-      'पाठ: ५ अन्तरप्रादेशिक सम्बन्धका आयामहरू',
-      'पाठ: ६ नेपालमा विपत्',
-      'पाठ: ७ विपत्का कारण र प्रभाव',
-      'पाठ: ८ नेपालमा विपत् व्यवस्थापन संयन्त्र र योजना निर्माण',
-      'पाठ: ९ भूगोल र सामाजिक जीवनमा सूचना प्रविधि',
-      'पाठ: १० सामाजिक नक्साब्कमा भूसूचना प्रणालीको प्रयोग'
+      'assets/databases/social5.1-min.pdf',
+      'assets/databases/social5.2-min.pdf',
+      'assets/databases/social5.3-min.pdf',
+      'assets/databases/social5.4-min.pdf',
+      'assets/databases/social5.5-min.pdf',
+      'assets/databases/social5.6-min.pdf',
+      'assets/databases/social5.7-min.pdf',
+      'assets/databases/social5.8-min.pdf',
+      'assets/databases/social5.9-min.pdf',
+      'assets/databases/social5.10-min.pdf',
     ],
     [
-      'पाठ : १  नेपालको प्राचीन इतिहास',
-      'पाठ :२ लिच्छवि काल',
-      'पाठ :३ मध्यकालीन राजनीतिक अवस्था',
-      'पाठ :४ मध्यकालीन आर्थिक, सामजिक तथा सांस्कृतिक अवस्था',
-      'पाठ :५ मध्यकालमा ससाना राज्यको उदय र अवसान',
-      'पाठ :६ आधुनिक काल',
-      'पाठ :७ एकीकरणपछिको राज्य सत्ता',
-      'पाठ :८ आधुनिक कालकोअर्थतन्त्र, कानुन, संस्कृति र कलाकौशल'
+      'assets/databases/social6.1-min.pdf',
+      'assets/databases/social6.2-min.pdf',
+      'assets/databases/social6.3-min.pdf',
+      'assets/databases/social6.4-min.pdf',
+      'assets/databases/social6.5-min.pdf',
+      'assets/databases/social6.6-min.pdf',
+      'assets/databases/social6.7-min.pdf',
+      'assets/databases/social6.8-min.pdf',
     ],
     [
-      'पाठ :१ वर्ग र समाजिक रूपान्तरण',
-      'पाठ :२ लैब्गिक सवाल',
-      'पाठ :३ लैब्गिक समावेशिता',
-      'पाठ :४ अपाब्गता र समावेशीकरण',
-      'पाठ :५ धार्मिक तथा क्षेत्रीय पहिचान',
-      'पाठ :६ समतामूलक समाज'
+      'assets/databases/social7.1-min.pdf',
+      'assets/databases/social7.2-min.pdf',
+      'assets/databases/social7.3-min.pdf',
+      'assets/databases/social7.4-min.pdf',
+      'assets/databases/social7.5-min.pdf',
+      'assets/databases/social7.6-min.pdf',
     ],
     [
-      'पाठ: १  सरकारको गठन प्रक्रिया',
-      'पाठ: २ सरकारका काम कर्तव्य र अधिकार',
-      'पाठ: ३ नागरिक अधिकार र कर्तव्य',
-      'पाठ: ४ किशोरकिशोरीको अधिकार र कर्तव्य',
-      'पाठ: ५ मुलुकी संहिता',
-      'पाठ: ६ सूचनाको हक',
-      'पाठ: ७ सदाचार र सामाजिक जवाफदेही'
+      'assets/databases/social8.1-min.pdf',
+      'assets/databases/social8.2-min.pdf',
+      'assets/databases/social8.3-min.pdf',
+      'assets/databases/social8.4-min.pdf',
+      'assets/databases/social8.5-min.pdf',
+      'assets/databases/social8.6-min.pdf',
+      'assets/databases/social8.7-min.pdf',
     ],
     [
-      'पाठ :१ सहरीकरणको अवधारणा',
-      'पाठ :२ नेपालमा सहरीकरण',
-      'पाठ :३ गाउँ सहर सम्बन्ध'
-          'पाठ :४ नेपालमा सहरीकरणका अवसर र चुनौती',
-      'पाठ :६ बसाइँसराइको प्रवृत्ति',
-      'पाठ :७ सुरक्षित एवम् मर्यादित आप्रवासन',
-      'पाठ :८ बसाइँसराइको प्रभाव'
+      'assets/databases/social9.1-min.pdf',
+      'assets/databases/social9.2-min.pdf',
+      'assets/databases/social9.3-min.pdf',
+      'assets/databases/social9.4-min.pdf',
+      'assets/databases/social9.6-min.pdf',
+      'assets/databases/social9.7-min.pdf',
+      'assets/databases/social9.8-min.pdf',
     ],
     [
-      'पाठ : १ नेपालको अर्थतन्त्र र विकास',
-      'पाठ :२ नेपालको विदेश नीति र नेपाल भारत तथा नेपाल चीन सम्बन्ध',
-      'पाठ :३ नेपालको अन्तर्राष्ट्रिय सम्बन्ध',
-      'पाठ :४ ',
-      'पाठ :५ ',
-      'पाठ :६ ',
-      'पाठ :७ '
+      'assets/databases/social10.1-min.pdf',
+      'assets/databases/social10.2-min.pdf',
+      'assets/databases/social10.3-min.pdf',
+      'assets/databases/social10.4-min.pdf',
+      'assets/databases/social10.5-min.pdf',
+      'assets/databases/social10.6-min.pdf',
+      'assets/databases/social10.7-min.pdf',
     ],
     [
-      'assets/databases/ch1.pdf',
-      'पाठ :२ ',
-      'पाठ :३ ',
-      'पाठ :४ ',
-      'पाठ :५ '
+      'assets/databases/social11.1-min.pdf',
+      'assets/databases/social11.2-min.pdf',
+      'assets/databases/social11.3-min.pdf',
+      'assets/databases/social11.4-min.pdf',
+      'assets/databases/social11.5-min.pdf',
     ]
   ];
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Social-XII'),
@@ -233,9 +230,7 @@ class _SocialPageState extends State<SocialPage> {
               value: Theme.of(context).brightness == Brightness.dark,
               onChanged: (value) {
                 widget.onToggleDarkMode();
-                
-              }
-            ),
+              }),
         ],
       ),
       body: ListView.builder(
@@ -273,13 +268,17 @@ class _SocialPageState extends State<SocialPage> {
   }
 }
 
-
 class MyChapters extends StatefulWidget {
   final int countList;
   final String subName;
   final List chapterName;
   final List chapterContent;
-  const MyChapters({super.key,required this.countList,required this.chapterName,required this.subName,required this.chapterContent});
+  const MyChapters(
+      {super.key,
+      required this.countList,
+      required this.chapterName,
+      required this.subName,
+      required this.chapterContent});
 
   @override
   State<MyChapters> createState() => _MyChaptersState();
@@ -304,8 +303,10 @@ class _MyChaptersState extends State<MyChapters> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => SocialContent(chapterName: widget.chapterName[index],
-                        chapterContent: widget.chapterContent[index],)),
+                        builder: (context) => SocialContent(
+                              chapterName: widget.chapterName[index],
+                              chapterContent: widget.chapterContent[index],
+                            )),
                   );
                 },
                 child: Card(
@@ -327,22 +328,22 @@ class _MyChaptersState extends State<MyChapters> {
 class SocialContent extends StatelessWidget {
   final String chapterName;
   final String chapterContent;
-  const SocialContent({super.key,required this.chapterName,required this.chapterContent});
+  const SocialContent(
+      {super.key, required this.chapterName, required this.chapterContent});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(chapterName),
-        elevation: 0,
-      ),
-      body: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SfPdfViewer.asset(
-                chapterContent,
-                interactionMode: PdfInteractionMode.pan,
-              ),
-            )
-    );
+        appBar: AppBar(
+          title: Text(chapterName),
+          elevation: 0,
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SfPdfViewer.asset(
+            chapterContent,
+            interactionMode: PdfInteractionMode.pan,
+          ),
+        ));
   }
 }
