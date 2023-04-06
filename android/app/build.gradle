@@ -60,6 +60,17 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    bundle {
+        language {
+            enableSplit = false
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
+        }
+    }
 }
 
 flutter {
