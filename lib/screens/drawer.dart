@@ -26,7 +26,7 @@ class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
     final Uri toTelegram =
-        Uri(scheme: 'https', host: 't.me', path: 'nepalenotes12science');
+        Uri(scheme: 'https', host: 'qsnpapers.nepalenotes.com', path: '2022/06/class-12-question-papers.html');
     final Uri toGForm =
         Uri(scheme: 'https', host: 'forms.gle', path: 'fzvC2pTidC4aNUb59');
 

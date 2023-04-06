@@ -27,16 +27,16 @@ class _EnglishPageState extends State<EnglishPage> {
       '8. Human Culture',
       '9. Ecology and Environment',
       '10. Career Opportunities',
-      // '11. Hobbies',
-      // '12. Animal World',
-      // '13. History',
-      // '14. Human Rights',
-      // '15. Leisure and Entertainment',
-      // '16. Fantasy',
-      // '17. War and Peace',
-      // '18. Music and Creation',
-      // '19. Migration and Diaspora',
-      // '20. Power and Politics'
+      '11. Hobbies',
+      '12. Animal World',
+      '13. History',
+      '14. Human Rights',
+      '15. Leisure and Entertainment',
+      '16. Fantasy',
+      '17. War and Peace',
+      '18. Music and Creation',
+      '19. Migration and Diaspora',
+      '20. Power and Politics'
     ],
     [
       'Unit One: Short Stories',
@@ -78,16 +78,16 @@ class _EnglishPageState extends State<EnglishPage> {
       'assets/databases/Chapter 8-min.pdf',
       'assets/databases/Chapter 9-min.pdf',
       'assets/databases/Chapter 10-min.pdf',
-      // '11',
-      // '12. ',
-      // '13. ',
-      // '14. ',
-      // '15. ',
-      // '16. ',
-      // '17. ',
-      // '18. ',
-      // '19. ',
-      // '20.  '
+      'assets/databases/Chapter 11-min.pdf',
+      'assets/databases/Chapter 12-min.pdf',
+      'assets/databases/Chapter 13-min.pdf',
+      'assets/databases/Chapter 14-min.pdf',
+      'assets/databases/Chapter 15-min.pdf',
+      'assets/databases/Chapter 16-min.pdf',
+      'assets/databases/Chapter 17-min.pdf',
+      'assets/databases/Chapter 18-min.pdf',
+      'assets/databases/Chapter 19-min.pdf',
+      'assets/databases/Chapter 20-min.pdf',
     ],
     [
       'Unit One: Short Stories',
@@ -191,6 +191,8 @@ class SectionPage extends StatefulWidget {
 
 class _SectionPageState extends State<SectionPage> {
   List<Color> cardColors = List.generate(25, (_) => Colors.white);
+  final colorText=Colors.white;
+  double textSize =16;
 
   @override
   Widget build(BuildContext context) {
@@ -249,8 +251,8 @@ class _SectionPageState extends State<SectionPage> {
                   child: ListTile(
                     title: Text(
                       widget.chapterName[index],
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    ),
+                     
+                      style: Theme.of(context).textTheme.bodyMedium)
                   ),
                 ),
               ),

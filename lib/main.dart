@@ -39,7 +39,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Class-XII Notes',
+      title: 'Class 12 Offline Notes',
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,

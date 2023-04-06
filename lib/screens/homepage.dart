@@ -29,11 +29,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final Uri toTelegram =
-        Uri(scheme: 'https', host: 't.me', path: 'nepalenotes');
+        Uri(scheme: 'https', host: 't.me', path: 'nepalenotes12science');
     final Uri moreNote = Uri(
         scheme: 'https',
         host: 'www.nepalenotes.com',
-        path: '2021/12/class-12-notes.html?m=1');
+        path: '2021/12/class-12-notes.html');
     return Scaffold(
       appBar: AppBar(
         title: const Text('Class-XII Notes '),
