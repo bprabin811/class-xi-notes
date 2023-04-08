@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.notesxi">
+    package="com.nepalenotes.notesxi">
    <application
         android:label="Class 12 Offline Notes"
         android:name="${applicationName}"

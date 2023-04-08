@@ -1,4 +1,4 @@
-package com.example.notesxi
+package com.nepalenotes.notesxi
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,6 +1,6 @@
 name: notes_xii_offline
 display_name: Class 12 Offline Notes
-description: A new Flutter project.
+description: Class 12 Offline Notes
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
